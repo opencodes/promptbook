@@ -1,7 +1,10 @@
-Featured 
-Hot 
-New 
-Top 
+Featured: Highlighted content selected for its quality or relevance.
+
+Hot: Popular and trending content that has received recent attention.
+
+New: Recently uploaded or created content.
+
+Top: Highly rated or most viewed content over a period of time.
 
 Fashion: Creative designs and styles of clothing and accessories.
 
