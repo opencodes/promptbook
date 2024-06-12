@@ -1,67 +1,7 @@
 [
     {
-        "name": "Featured",
+        "name": "Test Category",
         "description": "Highlighted content selected for its quality or relevance.",
-        "slug": "featured"
-    },
-    {
-        "name": "Hot",
-        "description": "Popular and trending content that has received recent attention.",
-        "slug": "hot"
-    },
-    {
-        "name": "New",
-        "description": "Recently uploaded or created content.",
-        "slug": "new"
-    },
-    {
-        "name": "Top",
-        "description": "Highly rated or most viewed content over a period of time.",
-        "slug": "top"
-    },
-    {
-        "name": "Fashion",
-        "description": "Creative designs and styles of clothing and accessories.",
-        "slug": "fashion"
-    },
-    {
-        "name": "Concept Art",
-        "description": "Visual representation of ideas for use in films, video games, or other media.",
-        "slug": "concept-art"
-    },
-    {
-        "name": "Art",
-        "description": "Creative works encompassing a variety of mediums and styles.",
-        "slug": "art"
-    },
-    {
-        "name": "Architecture",
-        "description": "Design and style of buildings and other physical structures.",
-        "slug": "architecture"
-    },
-    {
-        "name": "Landscapes",
-        "description": "Artistic depictions of natural scenery like mountains, valleys, and forests.",
-        "slug": "landscapes"
-    },
-    {
-        "name": "Logos, Icons & Design",
-        "description": "Graphic designs used for branding and user interfaces.",
-        "slug": "logos-icons-design"
-    },
-    {
-        "name": "Interior Design",
-        "description": "Art and science of enhancing the interiors of spaces to achieve a more aesthetically pleasing environment.",
-        "slug": "interior-design"
-    },
-    {
-        "name": "3D / Renders",
-        "description": "Computer-generated imagery that creates three-dimensional objects and scenes.",
-        "slug": "3d-renders"
-    },
-    {
-        "name": "Character Design",
-        "description": "Creating and developing visual appearances for characters in media like games, animations, and comics.",
-        "slug": "character-design"
+        "slug": "test"
     }
 ]

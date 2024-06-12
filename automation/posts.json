@@ -1,14 +1,34 @@
 [
     {
-        "title": "A sleek and modern 3D logo",
-        "content": "A sleek and modern orange and green 3D logo for 'Art of Expression' is prominently displayed, with bold, eye-catching letters that exude sophistication. , an embossed 3D image of a gray paint brush stroke symbolizes the brand's connection to digital art agency . Beneath the logo, the text'Unveil The Inner Artist' highlights the brand's diverse offerings. Contact information, '+91-0000000000' is written in a clean, legible font, inviting customers to reach out directly. The overall design showcases the brand's commitment to art, sing, dance and modern design., 3d render",
-        "image_path": "../images/post_06_jun_2024_3.jpeg",
-        "categories": [1, 16]
+        "title": "Create a real hyper air brush oil painting of a yo...",
+        "content": "Create a real hyper air brush oil painting of a young, beautiful, chubby, cutie, Indian women with clear facials, clear enlarged orange eyes, in a neon lotus printed saree standing near a lake, under the light of a full moon with a warm and serene night time atmosphere",
+        "image_path": "/Users/rajeshjha/codebase/promptbook/generated_images/generated_image_20240610_102746.png",
+        "categories": [
+            1
+        ]
     },
     {
-        "title": "Lord Shiva vs. Mata Parvati",
-        "content": "Lord Shiva vs. Mata Parvati: Create an 8k, hyper-realistic, airbrush glossy double exposure of Shiva as powerful god and Parvati as powerful goddess , with a backdrop of the destroyed Earth HQ, illuminated by the ominous glow of the Infinity trishul.",
-        "image_path": "../images/post_06_jun_2024_4.jpeg",
-        "categories": [1, 6]
+        "title": "man in a black costume standing in front of a full...",
+        "content": "man in a black costume standing in front of a full moon, cyborg ninja, raiden metal gear, cyberpunk samurai, 8 k high detail concept art, epic ninja suit, black scales and cyborg tech, stealth suit, man mecha, saudi futuristic warrior mecha, fractal cyborg ninja background, very beautiful cyberpunk samurai, beautiful biomechanical djinn,red themed",
+        "image_path": "/Users/rajeshjha/codebase/promptbook/generated_images/generated_images/generated_image_20240610_102817.png",
+        "categories": [
+            1
+        ]
+    },
+    {
+        "title": "watercolor, realistic, whimsical, a couple holds a...",
+        "content": "watercolor, realistic, whimsical, a couple holds a newborn baby in her arms while he holds a bouquet of dandelions in his hand, he blows on one of them making all the petals fly, with Edwardian Script ITC words of Family No spelling errors",
+        "image_path": "/Users/rajeshjha/codebase/promptbook/generated_images/generated_images/generated_image_20240610_102847.png",
+        "categories": [
+            1
+        ]
+    },
+    {
+        "title": "a woman with a giant Rolex watch worn as a necklac...",
+        "content": "a woman with a giant Rolex watch worn as a necklace, smiling confidently, with a luxurious mansion interior in the background",
+        "image_path": "../generated_images/generated_image_20240610_102918.png",
+        "categories": [
+            1
+        ]
     }
 ]

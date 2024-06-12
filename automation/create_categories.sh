@@ -3,7 +3,7 @@
 # Set your WordPress site URL and authentication details
 SITE_URL="https://promptbook.in"
 USERNAME="promptbook.in"
-PASSWORD="WnZ7 RLg2 D7sU 5CBT L5zd iiAR"
+PASSWORD="u7uR 0PaF gY0h cHQJ F4jV ek6l"
 
 # Path to the categories JSON file
 CATEGORIES_FILE="categories.json"
