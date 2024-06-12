@@ -23,5 +23,5 @@
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
-/web_crawler/chromedriver/*
-/web_crawler/venv/*
+/promptbook/web_crawler/chromedriver/*
+/promptbook/web_crawler/venv/*
