@@ -32,92 +32,94 @@ def write_json_and_update_prompts(image_data_list, unprocessed_prompts, json_fil
     with open(prompt_file_path, "w") as prompt_file:
         prompt_file.write("\n".join(unprocessed_prompts))
 
-def main():
+def setup_webdriver():
     # Connect to the existing Chrome session
     options = webdriver.ChromeOptions()
     options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-
     driver = webdriver.Chrome(options=options)
+    return driver
 
+def open_webpage(driver, url):
+    driver.get(url)
+    time.sleep(5)  # Wait for the page to load completely
+
+def find_element(driver, by, value, timeout=10):
+    return WebDriverWait(driver, timeout).until(EC.presence_of_element_located((by, value)))
+
+def find_elements(driver, by, value, timeout=10):
+    return WebDriverWait(driver, timeout).until(EC.presence_of_all_elements_located((by, value)))
+
+def process_prompt(driver, prompt, directory):
     try:
-        # Open the web page
-        driver.get("https://designer.microsoft.com/image-creator")
+        # Find and click the prompt button
+        prompt_button = find_element(driver, By.CSS_SELECTOR, 'button[data-testid="input-option-button-prompt"]')
+        prompt_button.send_keys(Keys.RETURN)
+        time.sleep(2)
         
-        # Wait for the page to load completely
+        # Find the prompt input box and enter a prompt
+        textareas = find_elements(driver, By.CSS_SELECTOR, 'textarea[data-testid="test-text-area"]')
+        prompt_input = textareas[1]  # Select the second one
+        prompt_input.send_keys('')  # Clear any existing text
+        prompt_input.send_keys(prompt)
+        prompt_input.click()  # Ensure the textarea has focus
+        driver.execute_script("arguments[0].value = '';", prompt_input)
+        time.sleep(5)
+        prompt_input.send_keys(prompt)
         time.sleep(5)
         
-        # Read prompts from a text file
+        generate_button = find_element(driver, By.CSS_SELECTOR, 'button[data-testid="omni-prompt-generate-button"]')
+        generate_button.send_keys(Keys.RETURN)
+        time.sleep(5)  # Adjust the sleep time if necessary
+        
+        # Locate the generated image
+        image_element = find_element(driver, By.CSS_SELECTOR, 'button[data-testid^="media-asset-button-"]')
+        
+        # Download the image
+        image_data_base64 = image_element.get_attribute('src').split(',')[1]  # Extract base64 data from src attribute
+        image_data = base64.b64decode(image_data_base64)
+
+        # Save the base64 decoded data to a file with timestamp appended
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        image_path = os.path.join(directory, f'generated_image_{timestamp}.png')
+        with open(image_path, 'wb') as file:
+            file.write(image_data)
+
+        print(f"Image for prompt '{prompt}' downloaded successfully!")
+        
+        return {
+            "title": truncate_title(prompt),
+            "content": prompt,  # You can add content if needed
+            "image_path": image_path,
+            "categories": [1]  # You can add categories if needed
+        }
+    except Exception as e:
+        print(f"Failed to process prompt: {e}")
+        return None
+
+def main():
+    driver = setup_webdriver()
+    try:
+        open_webpage(driver, "https://designer.microsoft.com/image-creator")
+        
         prompt_file_path = "prompt.txt"
         prompts = read_prompts_from_file(prompt_file_path)
         
         image_data_list = []
         unprocessed_prompts = []
         
-        # Create the directory for saving images if it does not exist
         directory = "generated_images"
         if not os.path.exists(directory):
             os.makedirs(directory)
         
         for prompt in prompts:
-            try:
-                # prompt_buttont = driver.find_element(By.CSS_SELECTOR, 'button[data-testid="input-option-button-prompt"]')
-                # print("Found prompt button with test id :", prompt_buttont.get_attribute("data-testid"))
-                # prompt_buttont.send_keys(Keys.RETURN)
-                # time.sleep(2)
-                # Find the prompt input box and enter a prompt
-                # prompt_input = driver.find_element(By.CSS_SELECTOR, 'textarea[data-testid="test-text-area"]')
-                # Wait for all textarea elements and select the first one
-                textareas = WebDriverWait(driver, 30).until(
-                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'textarea[data-testid="test-text-area"]'))
-                )
-                prompt_input = textareas[0]  # Select the first one
-                print("Found prompt input with test id :", prompt_input.get_attribute("data-testid"))
-
-                prompt_input.send_keys(prompt)
-                
-                
-
-
-
-
-                time.sleep(5)
-                generate_buttont = driver.find_element(By.CSS_SELECTOR, 'button[data-testid="omni-prompt-generate-button"]')
-                print("Found generate button with test id :", generate_buttont.get_attribute("data-testid"))
-                generate_buttont.send_keys(Keys.RETURN)
-                
-                # Wait for the images to be generated
-                time.sleep(30)  # Adjust the sleep time if necessary
-                
-                # Locate the generated image
-                image_element = driver.find_element(By.CSS_SELECTOR, 'button[data-testid^="media-asset-button-"]')
-                
-                # Download the image
-                image_data_base64 = image_element.get_attribute('src').split(',')[1]  # Extract base64 data from src attribute
-                image_data = base64.b64decode(image_data_base64)
-
-                # Save the base64 decoded data to a file with timestamp appended
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                image_path = os.path.join(directory, f'generated_image_{timestamp}.png')
-                with open(image_path, 'wb') as file:
-                    file.write(image_data)
-
-                print(f"Image for prompt '{prompt}' downloaded successfully!")
-                
-                # Add prompt, image path, and other required fields to the list
-                image_data_list.append({
-                    "title": truncate_title(prompt),
-                    "content": prompt,  # You can add content if needed
-                    "image_path": image_path,
-                    "categories": [1]  # You can add categories if needed
-                })
-            except Exception as e:
-                print(f"Failed to process prompt: {e}")
+            result = process_prompt(driver, prompt, directory)
+            if result:
+                image_data_list.append(result)
+            else:
                 unprocessed_prompts.append(prompt)
         
-        # Write JSON file and update prompt file with unprocessed prompts
-        # write_json_and_update_prompts(image_data_list, unprocessed_prompts, "posts.json", prompt_file_path)
+        write_json_and_update_prompts(image_data_list, unprocessed_prompts, "posts.json", prompt_file_path)
         print("JSON file generated and unprocessed prompts updated successfully!")
-
     finally:
         driver.quit()
 
