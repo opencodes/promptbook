@@ -49,14 +49,16 @@ def find_element(driver, by, value, timeout=10):
 def find_elements(driver, by, value, timeout=10):
     return WebDriverWait(driver, timeout).until(EC.presence_of_all_elements_located((by, value)))
 
-def process_prompt(driver, prompt, directory):
+def click_prompt_button(driver):
     try:
-        # Find and click the prompt button
         prompt_button = find_element(driver, By.CSS_SELECTOR, 'button[data-testid="input-option-button-prompt"]')
         prompt_button.send_keys(Keys.RETURN)
         time.sleep(2)
-        
-        # Find the prompt input box and enter a prompt
+    except Exception as e:
+        raise RuntimeError(f"Failed to find or click prompt button: {e}")
+
+def enter_prompt_text(driver, prompt):
+    try:
         textareas = find_elements(driver, By.CSS_SELECTOR, 'textarea[data-testid="test-text-area"]')
         prompt_input = textareas[1]  # Select the second one
         prompt_input.send_keys('')  # Clear any existing text
@@ -66,24 +68,39 @@ def process_prompt(driver, prompt, directory):
         time.sleep(5)
         prompt_input.send_keys(prompt)
         time.sleep(5)
-        
+    except Exception as e:
+        raise RuntimeError(f"Failed to find or enter text in prompt input: {e}")
+
+def click_generate_button(driver):
+    try:
         generate_button = find_element(driver, By.CSS_SELECTOR, 'button[data-testid="omni-prompt-generate-button"]')
         generate_button.send_keys(Keys.RETURN)
-        time.sleep(5)  # Adjust the sleep time if necessary
-        
-        # Locate the generated image
+        time.sleep(30)  # Adjust the sleep time if necessary
+    except Exception as e:
+        raise RuntimeError(f"Failed to find or click generate button: {e}")
+
+def download_image(driver, directory):
+    try:
         image_element = find_element(driver, By.CSS_SELECTOR, 'button[data-testid^="media-asset-button-"]')
-        
-        # Download the image
         image_data_base64 = image_element.get_attribute('src').split(',')[1]  # Extract base64 data from src attribute
         image_data = base64.b64decode(image_data_base64)
-
-        # Save the base64 decoded data to a file with timestamp appended
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         image_path = os.path.join(directory, f'generated_image_{timestamp}.png')
         with open(image_path, 'wb') as file:
             file.write(image_data)
+        return image_path
+    except Exception as e:
+        raise RuntimeError(f"Failed to locate, extract or save generated image: {e}")
 
+def process_prompt(driver, prompt, directory):
+    try:
+        click_prompt_button(driver)
+        enter_prompt_text(driver, prompt)
+        click_generate_button(driver)
+        error_message = "Images couldn't be generated"
+        if driver.page_source.find(error_message) != -1:
+            return None
+        image_path = download_image(driver, directory)
         print(f"Image for prompt '{prompt}' downloaded successfully!")
         
         return {
@@ -93,8 +110,7 @@ def process_prompt(driver, prompt, directory):
             "categories": [1]  # You can add categories if needed
         }
     except Exception as e:
-        print(f"Failed to process prompt: {e}")
-        return None
+        return f"Failed to process prompt '{prompt}': {e}"
 
 def main():
     driver = setup_webdriver()
@@ -106,6 +122,7 @@ def main():
         
         image_data_list = []
         unprocessed_prompts = []
+        error_messages = []
         
         directory = "generated_images"
         if not os.path.exists(directory):
@@ -113,13 +130,19 @@ def main():
         
         for prompt in prompts:
             result = process_prompt(driver, prompt, directory)
-            if result:
+            if isinstance(result, dict):
                 image_data_list.append(result)
             else:
                 unprocessed_prompts.append(prompt)
+                error_messages.append(result)
         
         write_json_and_update_prompts(image_data_list, unprocessed_prompts, "posts.json", prompt_file_path)
         print("JSON file generated and unprocessed prompts updated successfully!")
+        
+        if error_messages:
+            print("\nErrors encountered during processing:")
+            for error in error_messages:
+                print(error)
     finally:
         driver.quit()
 
