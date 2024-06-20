@@ -51,14 +51,17 @@ def find_elements(driver, by, value, timeout=10):
 
 def click_prompt_button(driver):
     try:
+        print("- Clicking prompt button...")
         prompt_button = find_element(driver, By.CSS_SELECTOR, 'button[data-testid="input-option-button-prompt"]')
         prompt_button.send_keys(Keys.RETURN)
         time.sleep(2)
     except Exception as e:
+        print(f"Failed to find or click prompt button: {e}")
         raise RuntimeError(f"Failed to find or click prompt button: {e}")
 
 def enter_prompt_text(driver, prompt):
     try:
+        print(f"- Entering prompt '{prompt}'...")
         textareas = find_elements(driver, By.CSS_SELECTOR, 'textarea[data-testid="test-text-area"]')
         prompt_input = textareas[1]  # Select the second one
         prompt_input.send_keys('')  # Clear any existing text
@@ -69,19 +72,23 @@ def enter_prompt_text(driver, prompt):
         prompt_input.send_keys(prompt)
         time.sleep(5)
     except Exception as e:
+        print(f"- Failed to find or enter text in prompt input: {e}")
         raise RuntimeError(f"Failed to find or enter text in prompt input: {e}")
 
 def click_generate_button(driver):
     try:
+        print("- Generating image...")
         generate_button = find_element(driver, By.CSS_SELECTOR, 'button[data-testid="omni-prompt-generate-button"]')
         generate_button.send_keys(Keys.RETURN)
         time.sleep(30)  # Adjust the sleep time if necessary
     except Exception as e:
+        print(f"- Failed to find or click generate button: {e}")
         raise RuntimeError(f"Failed to find or click generate button: {e}")
 
 def download_image(driver, directory):
     try:
-        image_element = find_element(driver, By.CSS_SELECTOR, 'button[data-testid^="media-asset-button-"]')
+        print("- Downloading image...")
+        image_element = find_element(driver, By.CSS_SELECTOR, 'button[data-testid^="media-asset-button-0"] img')
         image_data_base64 = image_element.get_attribute('src').split(',')[1]  # Extract base64 data from src attribute
         image_data = base64.b64decode(image_data_base64)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -90,18 +97,21 @@ def download_image(driver, directory):
             file.write(image_data)
         return image_path
     except Exception as e:
+        print(f"- Failed to download image: {e}")
         raise RuntimeError(f"Failed to locate, extract or save generated image: {e}")
 
 def process_prompt(driver, prompt, directory):
     try:
+        print(f"----- Processing prompt '{prompt}' -----")
         click_prompt_button(driver)
         enter_prompt_text(driver, prompt)
         click_generate_button(driver)
         error_message = "Images couldn't be generated"
         if driver.page_source.find(error_message) != -1:
+            print(f"- Failed to generate image for prompt '{prompt}'")
             return None
         image_path = download_image(driver, directory)
-        print(f"Image for prompt '{prompt}' downloaded successfully!")
+        print(f"Image for prompt downloaded successfully!")
         
         return {
             "title": truncate_title(prompt),
@@ -115,7 +125,10 @@ def process_prompt(driver, prompt, directory):
 def main():
     driver = setup_webdriver()
     try:
+        print("----- Starting image generation -----")
+        print("Opening webpage...")
         open_webpage(driver, "https://designer.microsoft.com/image-creator")
+        print("Webpage opened successfully!")
         
         prompt_file_path = "prompt.txt"
         prompts = read_prompts_from_file(prompt_file_path)
@@ -128,14 +141,18 @@ def main():
         if not os.path.exists(directory):
             os.makedirs(directory)
         
+        print(f"Processing prompts...{len(prompts)}")
         for prompt in prompts:
             result = process_prompt(driver, prompt, directory)
             if isinstance(result, dict):
                 image_data_list.append(result)
             else:
                 unprocessed_prompts.append(prompt)
+                print(f"- Failed to generate image for prompt '{prompt}'")
                 error_messages.append(result)
         
+        print("----- Image generation complete -----")
+        print(f"Generated {len(image_data_list)} images!")
         write_json_and_update_prompts(image_data_list, unprocessed_prompts, "posts.json", prompt_file_path)
         print("JSON file generated and unprocessed prompts updated successfully!")
         

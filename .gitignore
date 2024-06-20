@@ -27,3 +27,5 @@
 /promptbook/web_crawler/venv/*
 venv/*
 promptbook/web_crawler/.idea/*
+.DS_Store
+.DS_Store
