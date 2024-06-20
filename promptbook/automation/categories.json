@@ -1,7 +1,480 @@
 [
     {
-        "name": "Test Category",
-        "description": "Highlighted content selected for its quality or relevance.",
-        "slug": "test"
+        "name": "Art Types",
+        "description": "Various styles and genres of art",
+        "slug": "art-types",
+        "subcategories": [
+            {
+                "name": "Realism",
+                "description": "Artistic style that aims to represent subject matter truthfully, without artificiality or exaggeration.",
+                "slug": "realism"
+            },
+            {
+                "name": "Surrealism",
+                "description": "Artistic movement that explores dreams, the unconscious mind, and the juxtaposition of unlikely elements.",
+                "slug": "surrealism"
+            },
+            {
+                "name": "Modernism",
+                "description": "Artistic movement that rejected traditional forms and experimented with new techniques, materials, and subjects.",
+                "slug": "modernism"
+            },
+            {
+                "name": "Impressionism",
+                "description": "Artistic movement characterized by visible brush strokes, emphasis on light and its changing qualities, and ordinary subject matter.",
+                "slug": "impressionism"
+            },
+            {
+                "name": "Romanticism",
+                "description": "Artistic movement emphasizing emotion, imagination, and the beauty of nature, often with a focus on the sublime and exotic.",
+                "slug": "romanticism"
+            },
+            {
+                "name": "Expressionism",
+                "description": "Artistic style that emphasizes the expression of inner experience over objective depiction of reality, often through distortion and vivid color.",
+                "slug": "expressionism"
+            },
+            {
+                "name": "Psychedelic Art",
+                "description": "Artistic style inspired by psychedelic experiences, often characterized by surreal imagery, vibrant colors, and intricate patterns.",
+                "slug": "psychedelic-art"
+            },
+            {
+                "name": "Postmodernism",
+                "description": "Artistic movement characterized by skepticism, irony, and a questioning of grand narratives and traditional conventions.",
+                "slug": "postmodernism"
+            },
+            {
+                "name": "Hyperrealism",
+                "description": "Artistic style that resembles high-resolution photography, often depicting everyday objects or scenes with extraordinary detail.",
+                "slug": "hyperrealism"
+            },
+            {
+                "name": "Fantasy",
+                "description": "Artistic genre that explores imaginative and fantastical themes, often involving magic, mythical creatures, and supernatural elements.",
+                "slug": "fantasy"
+            },
+            {
+                "name": "Cyberpunk",
+                "description": "Artistic style that combines futuristic elements with a gritty, dystopian atmosphere, often exploring themes of technology, society, and identity.",
+                "slug": "cyberpunk"
+            },
+            {
+                "name": "Minimalism",
+                "description": "Artistic style characterized by simplicity, austerity, and an emphasis on form and function over ornamentation.",
+                "slug": "minimalism"
+            },
+            {
+                "name": "Pop Art",
+                "description": "Artistic movement that draws inspiration from popular culture and mass media, often using bold colors and imagery.",
+                "slug": "pop-art"
+            },
+            {
+                "name": "Folk Art",
+                "description": "Artistic tradition passed down through generations within a particular culture, often reflecting cultural beliefs, rituals, and customs.",
+                "slug": "folk-art"
+            },
+            {
+                "name": "Retro",
+                "description": "Artistic style inspired by past decades or nostalgic aesthetics, often characterized by vintage design elements and motifs.",
+                "slug": "retro"
+            },
+            {
+                "name": "Abstract",
+                "description": "Artistic style that does not attempt to represent external reality, focusing instead on shapes, colors, and forms.",
+                "slug": "abstract"
+            },
+            {
+                "name": "Fauvism",
+                "description": "Artistic movement characterized by vibrant colors, bold brushwork, and simplified forms, often depicting scenes with intense emotional expression.",
+                "slug": "fauvism"
+            },
+            {
+                "name": "Art Nouveau",
+                "description": "Artistic style characterized by flowing lines, organic forms, and decorative motifs inspired by nature and natural forms.",
+                "slug": "art-nouveau"
+            },
+            {
+                "name": "Arabesque",
+                "description": "Artistic motif characterized by intricate, interlaced designs often inspired by Islamic art and architecture.",
+                "slug": "arabesque"
+            },
+            {
+                "name": "Vintage boho",
+                "description": "Artistic style blending vintage aesthetics with bohemian influences, often characterized by eclectic and free-spirited design elements.",
+                "slug": "vintage-boho"
+            },
+            {
+                "name": "Anime",
+                "description": "Artistic style originating from Japan, often characterized by colorful artwork, vibrant characters, and fantastical themes.",
+                "slug": "anime"
+            },
+            {
+                "name": "Cartography",
+                "description": "Artistic representation of geographical features and locations, often combining elements of science and design.",
+                "slug": "cartography"
+            },
+            {
+                "name": "Vector Art",
+                "description": "Artistic technique that uses mathematical equations to create shapes and designs, often used in digital graphics and illustrations.",
+                "slug": "vector-art"
+            },
+            {
+                "name": "Tile art",
+                "description": "Artistic technique involving the creation of patterns and designs using tiles or ceramic pieces, often found in decorative and architectural applications.",
+                "slug": "tile-art"
+            },
+            {
+                "name": "Floral",
+                "description": "Artistic theme centered around flowers and plant life, often used in decorative arts, textiles, and botanical illustrations.",
+                "slug": "floral"
+            },
+            {
+                "name": "Prehistoric",
+                "description": "Artistic representations and artifacts from prehistoric times, often depicting early human life, animals, and natural landscapes.",
+                "slug": "prehistoric"
+            },
+            {
+                "name": "Wonderland",
+                "description": "Artistic theme inspired by fantasy and imagination, often featuring whimsical and surreal elements reminiscent of a dreamlike world.",
+                "slug": "wonderland"
+            },
+            {
+                "name": "Creepy",
+                "description": "Artistic style that evokes fear, unease, or discomfort, often using dark and eerie imagery.",
+                "slug": "creepy"
+            },
+            {
+                "name": "Mosaic",
+                "description": "Artistic technique involving the arrangement of small pieces of colored glass, stone, or other materials to create patterns and images.",
+                "slug": "mosaic"
+            }
+        ]
+    },
+    {
+        "name": "Modifiers",
+        "description": "Various artistic techniques and styles",
+        "slug": "modifiers",
+        "subcategories": [
+            {
+                "name": "Pixel Art",
+                "description": "Artistic technique that uses pixelated images, often resembling old-school video game graphics.",
+                "slug": "pixel-art"
+            },
+            {
+                "name": "Sticker",
+                "description": "Artistic medium involving adhesive-backed designs, often used for decoration, communication, or graffiti art.",
+                "slug": "sticker"
+            },
+            {
+                "name": "App icon",
+                "description": "Artistic design used as an icon for mobile applications, often simplified and recognizable at small sizes.",
+                "slug": "app-icon"
+            },
+            {
+                "name": "Geometric",
+                "description": "Artistic style characterized by the use of geometric shapes and patterns, often creating visually appealing and structured compositions.",
+                "slug": "geometric"
+            },
+            {
+                "name": "Manga",
+                "description": "Artistic style originating from Japan, characterized by its distinct visual style, storytelling techniques, and diverse genres.",
+                "slug": "manga"
+            },
+            {
+                "name": "Ukiyo-e",
+                "description": "Traditional Japanese woodblock printing technique, often depicting scenes from everyday life, nature, and historical events.",
+                "slug": "ukiyo-e"
+            },
+            {
+                "name": "Paper Collage",
+                "description": "Artistic technique involving the use of paper or other materials to create collages, often exploring themes of composition and texture.",
+                "slug": "paper-collage"
+            },
+            {
+                "name": "Pastel Drawing",
+                "description": "Artistic technique using soft pastels to create drawings, often known for their soft, blendable colors and expressive qualities.",
+                "slug": "pastel-drawing"
+            },
+            {
+                "name": "Pan-African",
+                "description": "Artistic style and cultural movement celebrating African heritage and identity, often promoting unity and social justice.",
+                "slug": "pan-african"
+            },
+            {
+                "name": "Graffiti Art",
+                "description": "Artistic expression through spray-painted or painted designs on walls and surfaces in public spaces, often conveying social or political messages.",
+                "slug": "graffiti-art"
+            },
+            {
+                "name": "Art Deco",
+                "description": "Artistic style characterized by geometric shapes, bold colors, and decorative motifs, originating from the 1920s and 1930s.",
+                "slug": "art-deco"
+            },
+            {
+                "name": "Cubism",
+                "description": "Artistic movement that depicts subjects from multiple perspectives, often using geometric shapes and fragmented forms.",
+                "slug": "cubism"
+            },
+            {
+                "name": "Purism",
+                "description": "Artistic movement emphasizing clarity, order, and simplicity, often using geometric shapes and industrial design influences.",
+                "slug": "purism"
+            },
+            {
+                "name": "Pointilism",
+                "description": "Artistic technique using small, distinct dots of color to create images, often emphasizing optical mixing and color theory.",
+                "slug": "pointilism"
+            },
+            {
+                "name": "Conceptual Art",
+                "description": "Artistic genre focused on the concept or idea behind the artwork, often challenging traditional notions of art and aesthetics.",
+                "slug": "conceptual-art"
+            },
+            {
+                "name": "Photography",
+                "description": "Artistic medium capturing images using light-sensitive materials or digital sensors, often used for artistic expression, documentation, and communication.",
+                "slug": "photography"
+            },
+            {
+                "name": "Miniature diorama",
+                "description": "Artistic technique creating small-scale models or scenes, often depicting detailed landscapes or narratives.",
+                "slug": "miniature-diorama"
+            },
+            {
+                "name": "Pencil Sketch",
+                "description": "Artistic technique using pencils to create drawings, often known for their fine lines, shading, and expressive qualities.",
+                "slug": "pencil-sketch"
+            },
+            {
+                "name": "Watercolor",
+                "description": "Artistic technique using water-based pigments to create paintings, often known for their translucent and fluid qualities.",
+                "slug": "watercolor"
+            },
+            {
+                "name": "Oil Painting",
+                "description": "Artistic technique using oil-based pigments to create paintings, often characterized by rich colors and depth.",
+                "slug": "oil-painting"
+            },
+            {
+                "name": "3D Animation",
+                "description": "Artistic technique creating animated sequences using three-dimensional models and environments.",
+                "slug": "3d-animation"
+            },
+            {
+                "name": "Anthropomorphic",
+                "description": "Artistic style depicting non-human creatures or objects with human characteristics or behaviors.",
+                "slug": "anthropomorphic"
+            },
+            {
+                "name": "Comic",
+                "description": "Artistic medium combining images and text to tell stories, often found in graphic novels, comic books, and strips.",
+                "slug": "comic"
+            },
+            {
+                "name": "Cartoon",
+                "description": "Artistic style characterized by exaggerated features and simplified forms, often used in animation and humorous illustrations.",
+                "slug": "cartoon"
+            },
+            {
+                "name": "Child Art",
+                "description": "Artistic creations made by children, often reflecting their imagination, emotions, and worldview.",
+                "slug": "child-art"
+            },
+            {
+                "name": "Coloring Book",
+                "description": "Artistic medium consisting of line drawings intended for coloring, often used for relaxation and creativity.",
+                "slug": "coloring-book"
+            },
+            {
+                "name": "Mythical",
+                "description": "Artistic theme centered around mythical creatures, legends, and folklore.",
+                "slug": "mythical"
+            },
+            {
+                "name": "Neon",
+                "description": "Artistic style using bright, fluorescent colors and lighting effects reminiscent of neon signs.",
+                "slug": "neon"
+            },
+            {
+                "name": "Avatar",
+                "description": "Artistic representation or character used to identify oneself online, often customizable and stylized.",
+                "slug": "avatar"
+            },
+            {
+                "name": "Blog illustration",
+                "description": "Artistic images created to accompany and enhance blog posts, articles, or online content.",
+                "slug": "blog-illustration"
+            },
+            {
+                "name": "Flat design",
+                "description": "Artistic style emphasizing simplicity and minimalism, often using clean lines, bright colors, and two-dimensional illustrations.",
+                "slug": "flat-design"
+            },
+            {
+                "name": "Vector vignette",
+                "description": "Artistic technique creating decorative designs or illustrations using vector graphics software.",
+                "slug": "vector-vignette"
+            },
+            {
+                "name": "Line sticker",
+                "description": "Artistic designs used as digital stickers, often created with bold lines and simple forms.",
+                "slug": "line-sticker"
+            },
+            {
+                "name": "Papercraft",
+                "description": "Artistic technique involving the construction of objects using paper or card, often used in crafts and model-making.",
+                "slug": "papercraft"
+            },
+            {
+                "name": "Futuristic",
+                "description": "Artistic style depicting visions of the future, often characterized by advanced technology, sleek designs, and innovative concepts.",
+                "slug": "futuristic"
+            },
+            {
+                "name": "8K",
+                "description": "Artistic content created or displayed in ultra-high definition resolution, typically 8,000 pixels in width.",
+                "slug": "8k"
+            },
+            {
+                "name": "2D",
+                "description": "Artistic creations using two-dimensional techniques and media, often characterized by flat surfaces and limited depth.",
+                "slug": "2d"
+            },
+            {
+                "name": "3D",
+                "description": "Artistic creations using three-dimensional techniques and media, often characterized by depth and perspective.",
+                "slug": "3d"
+            },
+            {
+                "name": "8-bit",
+                "description": "Artistic style inspired by early video game graphics, characterized by simple, blocky visuals and limited color palettes.",
+                "slug": "8-bit"
+            },
+            {
+                "name": "Splatter paint",
+                "description": "Artistic technique involving splashes and drips of paint, often creating dynamic and expressive compositions.",
+                "slug": "splatter-paint"
+            },
+            {
+                "name": "Cybernetic",
+                "description": "Artistic theme combining organic and mechanical elements, often exploring themes of technology, augmentation, and human-machine interaction.",
+                "slug": "cybernetic"
+            },
+            {
+                "name": "Glow in the dark",
+                "description": "Artistic effect or technique creating designs that glow or fluoresce in the dark, often used for decorative and visual impact.",
+                "slug": "glow-in-the-dark"
+            },
+            {
+                "name": "Studio lightning",
+                "description": "Artistic technique using controlled lighting setups in a studio environment to enhance visual impact and clarity in photography and cinematography.",
+                "slug": "studio-lightning"
+            },
+            {
+                "name": "Sharp focus",
+                "description": "Artistic technique emphasizing precise focus and clarity, often used in photography and visual media to highlight details.",
+                "slug": "sharp-focus"
+            },
+            {
+                "name": "Macabre",
+                "description": "Artistic style focusing on themes of death, darkness, and the supernatural, often evoking feelings of unease and fascination.",
+                "slug": "macabre"
+            },
+            {
+                "name": "Ultra-sharp",
+                "description": "Artistic technique or style characterized by extreme sharpness and detail, often used in photography and digital imaging.",
+                "slug": "ultra-sharp"
+            },
+            {
+                "name": "Film noir",
+                "description": "Artistic genre characterized by dark and cynical themes, stark lighting contrasts, and a sense of mystery and tension.",
+                "slug": "film-noir"
+            },
+            {
+                "name": "Disney",
+                "description": "Artistic style and brand associated with Walt Disney productions, characterized by whimsical characters, magical settings, and animated storytelling.",
+                "slug": "disney"
+            },
+            {
+                "name": "Chibi",
+                "description": "Artistic style featuring exaggerated proportions and cute, childlike characters, often found in anime and manga.",
+                "slug": "chibi"
+            },
+            {"name": "Portrait", "description": "Artistic representation of a person, often focusing on capturing their likeness and personality.", "slug": "portrait"},
+            {"name": "Soft illumination", "description": "Artistic effect using soft and gentle lighting to create a subtle and relaxed atmosphere.", "slug": "soft-illumination"},
+            {"name": "Monochrome", "description": "Artistic style using a single color or shades of a single color, often emphasizing contrast and texture.", "slug": "monochrome"},
+            {"name": "Emoji", "description": "Artistic representations of facial expressions, objects, and symbols used in digital communication and messaging.", "slug": "emoji"},
+            {"name": "Stained glass", "description": "Artistic technique involving colored glass pieces joined together to form decorative windows, panels, or objects.", "slug": "stained-glass"},
+            {"name": "Fluffy", "description": "Artistic style emphasizing soft and fluffy textures, often used in illustrations and character designs.", "slug": "fluffy"},
+            {"name": "Logo", "description": "Artistic design or symbol representing a brand, organization, or concept, often designed to be easily recognizable and memorable.", "slug": "logo"},
+            {"name": "Isometric", "description": "Artistic technique creating three-dimensional objects and scenes using equal angles and proportions, often used in architectural and game design.", "slug": "isometric"},
+            {"name": "Metallic", "description": "Artistic style using metallic colors and textures, often to create a sense of shine, durability, or industrial aesthetics.", "slug": "metallic"},
+            {"name": "Landscape", "description": "Artistic representation of natural scenery, often emphasizing the beauty and majesty of the outdoors.", "slug": "landscape"},
+            {"name": "Illustration", "description": "Artistic interpretation or visual explanation of a concept, story, or idea, often created for books, magazines, or digital media.", "slug": "illustration"},
+            {"name": "Poster", "description": "Artistic design created for promotional or informational purposes, often featuring bold graphics and concise messaging.", "slug": "poster"}
+
+        ]
+    },
+    {
+        "name": "Composition",
+        "description": "Various artistic compositions and viewpoints",
+        "slug": "composition",
+        "subcategories": [
+            {"name": "Close up", "description": "Artistic composition focusing on a subject at close range, often revealing details and textures not visible from afar.", "slug": "close-up"},
+            {"name": "Fish-eye view", "description": "Artistic perspective that distorts the visual field to create a wide-angle effect, often exaggerating depth and curvature.", "slug": "fish-eye-view"},
+            {"name": "Long angle", "description": "Artistic perspective from a long distance or elevated viewpoint, often used to capture expansive scenes or emphasize height.", "slug": "long-angle"},
+            {"name": "Minimal line art", "description": "Artistic style using simple lines and shapes to create compositions with minimal detail and complexity.", "slug": "minimal-line-art"},
+            {"name": "Vintage postcard", "description": "Artistic composition resembling the style and aesthetic of vintage postcards, often evoking nostalgia and historical charm.", "slug": "vintage-postcard"},
+            {"name": "Studio shot", "description": "Artistic composition created in a controlled studio environment, often using artificial lighting and carefully arranged props.", "slug": "studio-shot"},
+            {"name": "Framed", "description": "Artistic composition emphasizing the use of framing elements to highlight and define the subject within a confined space.", "slug": "framed"},
+            {"name": "Canvas", "description": "Artistic composition created on a canvas surface, often using traditional painting techniques and materials.", "slug": "canvas"},
+            {"name": "Sculpture", "description": "Artistic creation of three-dimensional forms and shapes, often carved, molded, or assembled using various materials and techniques.", "slug": "sculpture"},
+            {"name": "Cave painting", "description": "Artistic expression found in prehistoric caves, often depicting animals, humans, and symbolic patterns using natural pigments and materials.", "slug": "cave-painting"},
+            {"name": "Drone shot", "description": "Artistic perspective captured using unmanned aerial vehicles (drones), often providing unique viewpoints and aerial landscapes.", "slug": "drone-shot"},
+            {"name": "Map", "description": "Artistic representation of geographical features and locations, often combining accuracy with visual appeal.", "slug": "map"},
+            {"name": "Vector line art", "description": "Artistic style using vector graphics to create clean and precise lines, often used in digital illustrations and designs.", "slug": "vector-line-art"},
+            {"name": "Single line drawing", "description": "Artistic technique creating drawings using a single continuous line, often emphasizing simplicity and fluidity.", "slug": "single-line-drawing"}
+        ]
+    },
+    {
+        "name": "Famous Artists",
+        "description": "Renowned artists known for their significant contributions to art history",
+        "slug": "famous-artists",
+        "subcategories": [
+            {"name": "Van Gogh", "description": "Dutch post-impressionist painter known for his vivid use of color and expressive brushwork, including works like 'Starry Night'.", "slug": "van-gogh"},
+            {"name": "Salvador Dali", "description": "Spanish surrealist artist known for his bizarre and dreamlike paintings, such as 'The Persistence of Memory'.", "slug": "salvador-dali"},
+            {"name": "Claude Monet", "description": "French impressionist painter known for his series of paintings capturing the effects of light and atmosphere, including 'Water Lilies'.", "slug": "claude-monet"},
+            {"name": "Max Ernst", "description": "German surrealist artist known for his innovative techniques and exploration of the subconscious mind, such as in 'The Elephant Celebes'.", "slug": "max-ernst"},
+            {"name": "Picasso", "description": "Spanish painter and sculptor known for co-founding the Cubist movement and creating iconic works like 'Guernica'.", "slug": "picasso"},
+            {"name": "Frida Kahlo", "description": "Mexican painter known for her self-portraits and depiction of Mexican culture, as seen in 'The Two Fridas'.", "slug": "frida-kahlo"},
+            {"name": "Rene Magritte", "description": "Belgian surrealist artist known for his thought-provoking images challenging perception and reality, such as 'The Son of Man'.", "slug": "rene-magritte"},
+            {"name": "Leibovitz", "description": "American portrait photographer known for her iconic portraits of celebrities and cultural figures, including 'John Lennon and Yoko Ono'.", "slug": "leibovitz"},
+            {"name": "Roy Liechtenstein", "description": "American pop artist known for his comic strip-inspired artwork and use of Ben-Day dots, as seen in 'Whaam!' and 'Drowning Girl'.", "slug": "roy-liechtenstein"},
+            {"name": "Yoshitaka Amano", "description": "Japanese artist known for his distinct style and illustrations for 'Final Fantasy' games and his fantasy-themed artworks.", "slug": "yoshitaka-amano"},
+            {"name": "Leonardo da Vinci", "description": "Italian polymath known for his contributions to art, science, and engineering, including iconic works like the 'Mona Lisa' and 'The Last Supper'.", "slug": "leonardo-da-vinci"},
+            {"name": "Andy Warhol", "description": "American artist and leading figure in the pop art movement known for his prints and paintings of celebrities and consumer culture, such as 'Campbell's Soup Cans'.", "slug": "andy-warhol"}
+        ]
+    },
+    {
+        "name": "Gender",
+        "description": "Categories related to gender representation in art",
+        "slug": "gender",
+        "subcategories": [
+            {"name": "Male", "description": "Artistic representations and subjects related to male identity, characteristics, and roles.", "slug": "male"},
+            {"name": "Female", "description": "Artistic representations and subjects related to female identity, characteristics, and roles.", "slug": "female"},
+            {"name": "Gender-neutral", "description": "Artistic representations and subjects not specifically associated with male or female gender identities.", "slug": "gender-neutral"}
+        ]
+    },
+    {
+        "name": "Object Types",
+        "description": "Categories related to types of objects depicted in art",
+        "slug": "object-types",
+        "subcategories": [
+            {"name": "Human", "description": "Artistic representations of human beings, their forms, expressions, and interactions.", "slug": "human"},
+            {"name": "Animal", "description": "Artistic representations of animals, including pets, wildlife, and mythical creatures.", "slug": "animal"},
+            {"name": "Non-living", "description": "Artistic representations of objects or entities that are not living organisms, such as vehicles, buildings, and inanimate objects.", "slug": "non-living"},
+            {"name": "Nature", "description": "Artistic representations of natural elements, landscapes, and environmental scenes.", "slug": "nature"}
+        ]
     }
 ]
