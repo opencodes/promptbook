@@ -1,0 +1,782 @@
+[
+    {
+      "term_id": 1,
+      "name": "Blog",
+      "slug": "blog",
+      "description": "Your blog category"
+    },
+    {
+      "term_id": 32,
+      "name": "Art Types",
+      "slug": "art-types",
+      "description": "Various styles and genres of art"
+    },
+    {
+      "term_id": 33,
+      "name": "Realism",
+      "slug": "realism",
+      "description": "Artistic style that aims to represent subject matt..."
+    },
+    {
+      "term_id": 34,
+      "name": "Surrealism",
+      "slug": "surrealism",
+      "description": "Artistic movement that explores dreams, the uncons..."
+    },
+    {
+      "term_id": 35,
+      "name": "Modernism",
+      "slug": "modernism",
+      "description": "Artistic movement that rejected traditional forms ..."
+    },
+    {
+      "term_id": 36,
+      "name": "Impressionism",
+      "slug": "impressionism",
+      "description": "Artistic movement characterized by visible brush s..."
+    },
+    {
+      "term_id": 37,
+      "name": "Romanticism",
+      "slug": "romanticism",
+      "description": "Artistic movement emphasizing emotion, imagination..."
+    },
+    {
+      "term_id": 38,
+      "name": "Expressionism",
+      "slug": "expressionism",
+      "description": "Artistic style that emphasizes the expression of i..."
+    },
+    {
+      "term_id": 39,
+      "name": "Psychedelic Art",
+      "slug": "psychedelic-art",
+      "description": "Artistic style inspired by psychedelic experiences..."
+    },
+    {
+      "term_id": 40,
+      "name": "Postmodernism",
+      "slug": "postmodernism",
+      "description": "Artistic movement characterized by skepticism, iro..."
+    },
+    {
+      "term_id": 41,
+      "name": "Hyperrealism",
+      "slug": "hyperrealism",
+      "description": "Artistic style that resembles high-resolution phot..."
+    },
+    {
+      "term_id": 42,
+      "name": "Fantasy",
+      "slug": "fantasy",
+      "description": "Artistic genre that explores imaginative and fanta..."
+    },
+    {
+      "term_id": 43,
+      "name": "Cyberpunk",
+      "slug": "cyberpunk",
+      "description": "Artistic style that combines futuristic elements w..."
+    },
+    {
+      "term_id": 44,
+      "name": "Minimalism",
+      "slug": "minimalism",
+      "description": "Artistic style characterized by simplicity, auster..."
+    },
+    {
+      "term_id": 45,
+      "name": "Pop Art",
+      "slug": "pop-art",
+      "description": "Artistic movement that draws inspiration from popu..."
+    },
+    {
+      "term_id": 46,
+      "name": "Folk Art",
+      "slug": "folk-art",
+      "description": "Artistic tradition passed down through generations..."
+    },
+    {
+      "term_id": 47,
+      "name": "Retro",
+      "slug": "retro",
+      "description": "Artistic style inspired by past decades or nostalg..."
+    },
+    {
+      "term_id": 48,
+      "name": "Abstract",
+      "slug": "abstract",
+      "description": "Artistic style that does not attempt to represent ..."
+    },
+    {
+      "term_id": 49,
+      "name": "Fauvism",
+      "slug": "fauvism",
+      "description": "Artistic movement characterized by vibrant colors,..."
+    },
+    {
+      "term_id": 50,
+      "name": "Art Nouveau",
+      "slug": "art-nouveau",
+      "description": "Artistic style characterized by flowing lines, org..."
+    },
+    {
+      "term_id": 51,
+      "name": "Arabesque",
+      "slug": "arabesque",
+      "description": "Artistic motif characterized by intricate, interla..."
+    },
+    {
+      "term_id": 52,
+      "name": "Vintage boho",
+      "slug": "vintage-boho",
+      "description": "Artistic style blending vintage aesthetics with bo..."
+    },
+    {
+      "term_id": 53,
+      "name": "Anime",
+      "slug": "anime",
+      "description": "Artistic style originating from Japan, often chara..."
+    },
+    {
+      "term_id": 54,
+      "name": "Cartography",
+      "slug": "cartography",
+      "description": "Artistic representation of geographical features a..."
+    },
+    {
+      "term_id": 55,
+      "name": "Vector Art",
+      "slug": "vector-art",
+      "description": "Artistic technique that uses mathematical equation..."
+    },
+    {
+      "term_id": 56,
+      "name": "Tile art",
+      "slug": "tile-art",
+      "description": "Artistic technique involving the creation of patte..."
+    },
+    {
+      "term_id": 57,
+      "name": "Floral",
+      "slug": "floral",
+      "description": "Artistic theme centered around flowers and plant l..."
+    },
+    {
+      "term_id": 58,
+      "name": "Prehistoric",
+      "slug": "prehistoric",
+      "description": "Artistic representations and artifacts from prehis..."
+    },
+    {
+      "term_id": 59,
+      "name": "Wonderland",
+      "slug": "wonderland",
+      "description": "Artistic theme inspired by fantasy and imagination..."
+    },
+    {
+      "term_id": 60,
+      "name": "Creepy",
+      "slug": "creepy",
+      "description": "Artistic style that evokes fear, unease, or discom..."
+    },
+    {
+      "term_id": 61,
+      "name": "Mosaic",
+      "slug": "mosaic",
+      "description": "Artistic technique involving the arrangement of sm..."
+    },
+    {
+      "term_id": 62,
+      "name": "Modifiers",
+      "slug": "modifiers",
+      "description": "Various artistic techniques and styles"
+    },
+    {
+      "term_id": 63,
+      "name": "Pixel Art",
+      "slug": "pixel-art",
+      "description": "Artistic technique that uses pixelated images, oft..."
+    },
+    {
+      "term_id": 64,
+      "name": "Sticker",
+      "slug": "sticker",
+      "description": "Artistic medium involving adhesive-backed designs,..."
+    },
+    {
+      "term_id": 65,
+      "name": "App icon",
+      "slug": "app-icon",
+      "description": "Artistic design used as an icon for mobile applica..."
+    },
+    {
+      "term_id": 66,
+      "name": "Geometric",
+      "slug": "geometric",
+      "description": "Artistic style characterized by the use of geometr..."
+    },
+    {
+      "term_id": 67,
+      "name": "Manga",
+      "slug": "manga",
+      "description": "Artistic style originating from Japan, characteriz..."
+    },
+    {
+      "term_id": 68,
+      "name": "Ukiyo-e",
+      "slug": "ukiyo-e",
+      "description": "Traditional Japanese woodblock printing technique,..."
+    },
+    {
+      "term_id": 69,
+      "name": "Paper Collage",
+      "slug": "paper-collage",
+      "description": "Artistic technique involving the use of paper or o..."
+    },
+    {
+      "term_id": 70,
+      "name": "Pastel Drawing",
+      "slug": "pastel-drawing",
+      "description": "Artistic technique using soft pastels to create dr..."
+    },
+    {
+      "term_id": 71,
+      "name": "Pan-African",
+      "slug": "pan-african",
+      "description": "Artistic style and cultural movement celebrating A..."
+    },
+    {
+      "term_id": 72,
+      "name": "Graffiti Art",
+      "slug": "graffiti-art",
+      "description": "Artistic expression through spray-painted or paint..."
+    },
+    {
+      "term_id": 73,
+      "name": "Art Deco",
+      "slug": "art-deco",
+      "description": "Artistic style characterized by geometric shapes, ..."
+    },
+    {
+      "term_id": 74,
+      "name": "Cubism",
+      "slug": "cubism",
+      "description": "Artistic movement that depicts subjects from multi..."
+    },
+    {
+      "term_id": 75,
+      "name": "Purism",
+      "slug": "purism",
+      "description": "Artistic movement emphasizing clarity, order, and ..."
+    },
+    {
+      "term_id": 76,
+      "name": "Pointilism",
+      "slug": "pointilism",
+      "description": "Artistic technique using small, distinct dots of c..."
+    },
+    {
+      "term_id": 77,
+      "name": "Conceptual Art",
+      "slug": "conceptual-art",
+      "description": "Artistic genre focused on the concept or idea behi..."
+    },
+    {
+      "term_id": 78,
+      "name": "Photography",
+      "slug": "photography",
+      "description": "Artistic medium capturing images using light-sensi..."
+    },
+    {
+      "term_id": 79,
+      "name": "Miniature diorama",
+      "slug": "miniature-diorama",
+      "description": "Artistic technique creating small-scale models or ..."
+    },
+    {
+      "term_id": 80,
+      "name": "Pencil Sketch",
+      "slug": "pencil-sketch",
+      "description": "Artistic technique using pencils to create drawing..."
+    },
+    {
+      "term_id": 81,
+      "name": "Watercolor",
+      "slug": "watercolor",
+      "description": "Artistic technique using water-based pigments to c..."
+    },
+    {
+      "term_id": 82,
+      "name": "Oil Painting",
+      "slug": "oil-painting",
+      "description": "Artistic technique using oil-based pigments to cre..."
+    },
+    {
+      "term_id": 83,
+      "name": "3D Animation",
+      "slug": "3d-animation",
+      "description": "Artistic technique creating animated sequences usi..."
+    },
+    {
+      "term_id": 84,
+      "name": "Anthropomorphic",
+      "slug": "anthropomorphic",
+      "description": "Artistic style depicting non-human creatures or ob..."
+    },
+    {
+      "term_id": 85,
+      "name": "Comic",
+      "slug": "comic",
+      "description": "Artistic medium combining images and text to tell ..."
+    },
+    {
+      "term_id": 86,
+      "name": "Cartoon",
+      "slug": "cartoon",
+      "description": "Artistic style characterized by exaggerated featur..."
+    },
+    {
+      "term_id": 87,
+      "name": "Child Art",
+      "slug": "child-art",
+      "description": "Artistic creations made by children, often reflect..."
+    },
+    {
+      "term_id": 88,
+      "name": "Coloring Book",
+      "slug": "coloring-book",
+      "description": "Artistic medium consisting of line drawings intend..."
+    },
+    {
+      "term_id": 89,
+      "name": "Mythical",
+      "slug": "mythical",
+      "description": "Artistic theme centered around mythical creatures,..."
+    },
+    {
+      "term_id": 90,
+      "name": "Neon",
+      "slug": "neon",
+      "description": "Artistic style using bright, fluorescent colors an..."
+    },
+    {
+      "term_id": 91,
+      "name": "Avatar",
+      "slug": "avatar",
+      "description": "Artistic representation or character used to ident..."
+    },
+    {
+      "term_id": 92,
+      "name": "Blog illustration",
+      "slug": "blog-illustration",
+      "description": "Artistic images created to accompany and enhance b..."
+    },
+    {
+      "term_id": 93,
+      "name": "Flat design",
+      "slug": "flat-design",
+      "description": "Artistic style emphasizing simplicity and minimali..."
+    },
+    {
+      "term_id": 94,
+      "name": "Vector vignette",
+      "slug": "vector-vignette",
+      "description": "Artistic technique creating decorative designs or ..."
+    },
+    {
+      "term_id": 95,
+      "name": "Line sticker",
+      "slug": "line-sticker",
+      "description": "Artistic designs used as digital stickers, often c..."
+    },
+    {
+      "term_id": 96,
+      "name": "Papercraft",
+      "slug": "papercraft",
+      "description": "Artistic technique involving the construction of o..."
+    },
+    {
+      "term_id": 97,
+      "name": "Futuristic",
+      "slug": "futuristic",
+      "description": "Artistic style depicting visions of the future, of..."
+    },
+    {
+      "term_id": 98,
+      "name": "8K",
+      "slug": "8k",
+      "description": "Artistic content created or displayed in ultra-hig..."
+    },
+    {
+      "term_id": 99,
+      "name": "2D",
+      "slug": "2d",
+      "description": "Artistic creations using two-dimensional technique..."
+    },
+    {
+      "term_id": 100,
+      "name": "3D",
+      "slug": "3d",
+      "description": "Artistic creations using three-dimensional techniq..."
+    },
+    {
+      "term_id": 101,
+      "name": "8-bit",
+      "slug": "8-bit",
+      "description": "Artistic style inspired by early video game graphi..."
+    },
+    {
+      "term_id": 102,
+      "name": "Splatter paint",
+      "slug": "splatter-paint",
+      "description": "Artistic technique involving splashes and drips of..."
+    },
+    {
+      "term_id": 103,
+      "name": "Cybernetic",
+      "slug": "cybernetic",
+      "description": "Artistic theme combining organic and mechanical el..."
+    },
+    {
+      "term_id": 104,
+      "name": "Glow in the dark",
+      "slug": "glow-in-the-dark",
+      "description": "Artistic effect or technique creating designs that..."
+    },
+    {
+      "term_id": 105,
+      "name": "Studio lightning",
+      "slug": "studio-lightning",
+      "description": "Artistic technique using controlled lighting setup..."
+    },
+    {
+      "term_id": 106,
+      "name": "Sharp focus",
+      "slug": "sharp-focus",
+      "description": "Artistic technique emphasizing precise focus and c..."
+    },
+    {
+      "term_id": 107,
+      "name": "Macabre",
+      "slug": "macabre",
+      "description": "Artistic style focusing on themes of death, darkne..."
+    },
+    {
+      "term_id": 108,
+      "name": "Ultra-sharp",
+      "slug": "ultra-sharp",
+      "description": "Artistic technique or style characterized by extre..."
+    },
+    {
+      "term_id": 109,
+      "name": "Film noir",
+      "slug": "film-noir",
+      "description": "Artistic genre characterized by dark and cynical t..."
+    },
+    {
+      "term_id": 110,
+      "name": "Disney",
+      "slug": "disney",
+      "description": "Artistic style and brand associated with Walt Disn..."
+    },
+    {
+      "term_id": 111,
+      "name": "Chibi",
+      "slug": "chibi",
+      "description": "Artistic style featuring exaggerated proportions a..."
+    },
+    {
+      "term_id": 112,
+      "name": "Portrait",
+      "slug": "portrait",
+      "description": "Artistic representation of a person, often focusin..."
+    },
+    {
+      "term_id": 113,
+      "name": "Soft illumination",
+      "slug": "soft-illumination",
+      "description": "Artistic effect using soft and gentle lighting to ..."
+    },
+    {
+      "term_id": 114,
+      "name": "Monochrome",
+      "slug": "monochrome",
+      "description": "Artistic style using a single color or shades of a..."
+    },
+    {
+      "term_id": 115,
+      "name": "Emoji",
+      "slug": "emoji",
+      "description": "Artistic representations of facial expressions, ob..."
+    },
+    {
+      "term_id": 116,
+      "name": "Stained glass",
+      "slug": "stained-glass",
+      "description": "Artistic technique involving colored glass pieces ..."
+    },
+    {
+      "term_id": 117,
+      "name": "Fluffy",
+      "slug": "fluffy",
+      "description": "Artistic style emphasizing soft and fluffy texture..."
+    },
+    {
+      "term_id": 118,
+      "name": "Logo",
+      "slug": "logo",
+      "description": "Artistic design or symbol representing a brand, or..."
+    },
+    {
+      "term_id": 119,
+      "name": "Isometric",
+      "slug": "isometric",
+      "description": "Artistic technique creating three-dimensional obje..."
+    },
+    {
+      "term_id": 120,
+      "name": "Metallic",
+      "slug": "metallic",
+      "description": "Artistic style using metallic colors and textures,..."
+    },
+    {
+      "term_id": 121,
+      "name": "Landscape",
+      "slug": "landscape",
+      "description": "Artistic representation of natural scenery, often ..."
+    },
+    {
+      "term_id": 122,
+      "name": "Illustration",
+      "slug": "illustration",
+      "description": "Artistic interpretation or visual explanation of a..."
+    },
+    {
+      "term_id": 123,
+      "name": "Poster",
+      "slug": "poster",
+      "description": "Artistic design created for promotional or informa..."
+    },
+    {
+      "term_id": 124,
+      "name": "Composition",
+      "slug": "composition",
+      "description": "Various artistic compositions and viewpoints"
+    },
+    {
+      "term_id": 125,
+      "name": "Close up",
+      "slug": "close-up",
+      "description": "Artistic composition focusing on a subject at clos..."
+    },
+    {
+      "term_id": 126,
+      "name": "Fish-eye view",
+      "slug": "fish-eye-view",
+      "description": "Artistic perspective that distorts the visual fiel..."
+    },
+    {
+      "term_id": 127,
+      "name": "Long angle",
+      "slug": "long-angle",
+      "description": "Artistic perspective from a long distance or eleva..."
+    },
+    {
+      "term_id": 128,
+      "name": "Minimal line art",
+      "slug": "minimal-line-art",
+      "description": "Artistic style using simple lines and shapes to cr..."
+    },
+    {
+      "term_id": 129,
+      "name": "Vintage postcard",
+      "slug": "vintage-postcard",
+      "description": "Artistic composition resembling the style and aest..."
+    },
+    {
+      "term_id": 130,
+      "name": "Studio shot",
+      "slug": "studio-shot",
+      "description": "Artistic composition created in a controlled studi..."
+    },
+    {
+      "term_id": 131,
+      "name": "Framed",
+      "slug": "framed",
+      "description": "Artistic composition emphasizing the use of framin..."
+    },
+    {
+      "term_id": 132,
+      "name": "Canvas",
+      "slug": "canvas",
+      "description": "Artistic composition created on a canvas surface, ..."
+    },
+    {
+      "term_id": 133,
+      "name": "Sculpture",
+      "slug": "sculpture",
+      "description": "Artistic creation of three-dimensional forms and s..."
+    },
+    {
+      "term_id": 134,
+      "name": "Cave painting",
+      "slug": "cave-painting",
+      "description": "Artistic expression found in prehistoric caves, of..."
+    },
+    {
+      "term_id": 135,
+      "name": "Drone shot",
+      "slug": "drone-shot",
+      "description": "Artistic perspective captured using unmanned aeria..."
+    },
+    {
+      "term_id": 136,
+      "name": "Map",
+      "slug": "map",
+      "description": "Artistic representation of geographical features a..."
+    },
+    {
+      "term_id": 137,
+      "name": "Vector line art",
+      "slug": "vector-line-art",
+      "description": "Artistic style using vector graphics to create cle..."
+    },
+    {
+      "term_id": 138,
+      "name": "Single line drawing",
+      "slug": "single-line-drawing",
+      "description": "Artistic technique creating drawings using a singl..."
+    },
+    {
+      "term_id": 139,
+      "name": "Famous Artists",
+      "slug": "famous-artists",
+      "description": "Renowned artists known for their significant contr..."
+    },
+    {
+      "term_id": 140,
+      "name": "Van Gogh",
+      "slug": "van-gogh",
+      "description": "Dutch post-impressionist painter known for his viv..."
+    },
+    {
+      "term_id": 141,
+      "name": "Salvador Dali",
+      "slug": "salvador-dali",
+      "description": "Spanish surrealist artist known for his bizarre an..."
+    },
+    {
+      "term_id": 142,
+      "name": "Claude Monet",
+      "slug": "claude-monet",
+      "description": "French impressionist painter known for his series ..."
+    },
+    {
+      "term_id": 143,
+      "name": "Max Ernst",
+      "slug": "max-ernst",
+      "description": "German surrealist artist known for his innovative ..."
+    },
+    {
+      "term_id": 144,
+      "name": "Picasso",
+      "slug": "picasso",
+      "description": "Spanish painter and sculptor known for co-founding..."
+    },
+    {
+      "term_id": 145,
+      "name": "Frida Kahlo",
+      "slug": "frida-kahlo",
+      "description": "Mexican painter known for her self-portraits and d..."
+    },
+    {
+      "term_id": 146,
+      "name": "Rene Magritte",
+      "slug": "rene-magritte",
+      "description": "Belgian surrealist artist known for his thought-pr..."
+    },
+    {
+      "term_id": 147,
+      "name": "Leibovitz",
+      "slug": "leibovitz",
+      "description": "American portrait photographer known for her iconi..."
+    },
+    {
+      "term_id": 148,
+      "name": "Roy Liechtenstein",
+      "slug": "roy-liechtenstein",
+      "description": "American pop artist known for his comic strip-insp..."
+    },
+    {
+      "term_id": 149,
+      "name": "Yoshitaka Amano",
+      "slug": "yoshitaka-amano",
+      "description": "Japanese artist known for his distinct style and i..."
+    },
+    {
+      "term_id": 150,
+      "name": "Leonardo da Vinci",
+      "slug": "leonardo-da-vinci",
+      "description": "Italian polymath known for his contributions to ar..."
+    },
+    {
+      "term_id": 151,
+      "name": "Andy Warhol",
+      "slug": "andy-warhol",
+      "description": "American artist and leading figure in the pop art ..."
+    },
+    {
+      "term_id": 152,
+      "name": "Gender",
+      "slug": "gender",
+      "description": "Categories related to gender representation in art"
+    },
+    {
+      "term_id": 153,
+      "name": "Male",
+      "slug": "male",
+      "description": "Artistic representations and subjects related to m..."
+    },
+    {
+      "term_id": 154,
+      "name": "Female",
+      "slug": "female",
+      "description": "Artistic representations and subjects related to f..."
+    },
+    {
+      "term_id": 155,
+      "name": "Gender-neutral",
+      "slug": "gender-neutral",
+      "description": "Artistic representations and subjects not specific..."
+    },
+    {
+      "term_id": 156,
+      "name": "Object Types",
+      "slug": "object-types",
+      "description": "Categories related to types of objects depicted in..."
+    },
+    {
+      "term_id": 157,
+      "name": "Human",
+      "slug": "human",
+      "description": "Artistic representations of human beings, their fo..."
+    },
+    {
+      "term_id": 158,
+      "name": "Animal",
+      "slug": "animal",
+      "description": "Artistic representations of animals, including pet..."
+    },
+    {
+      "term_id": 159,
+      "name": "Non-living",
+      "slug": "non-living",
+      "description": "Artistic representations of objects or entities th..."
+    },
+    {
+      "term_id": 160,
+      "name": "Nature",
+      "slug": "nature",
+      "description": "Artistic representations of natural elements, land..."
+    }
+  ]
