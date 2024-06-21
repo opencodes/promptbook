@@ -8,7 +8,7 @@ get_header();
 <?php
                 $categories = get_categories();
                 ?>
-                <pre style="width:500px;"><?php print_r($categories); ?></pre> 
+                <!-- <pre style="width:500px;"><?php //print_r($categories); ?></pre>  -->
 <div class="custom-nav site-bottom-header-wrap site-header-row-container site-header-focus-item site-header-row-layout-standard"
     data-section="kadence_customizer_header_bottom">
     <div class="site-header-row-container-inner">
@@ -19,11 +19,13 @@ get_header();
                 <?php
                 if ($categories):
                     foreach ($categories as $category):
+                        if ($category->category_parent == 0):
                         ?>
                         <button class="category-tab" data-category-id="<?php echo esc_attr($category->term_id); ?>">
                             <?php echo esc_html($category->name); ?>
                         </button>
                         <?php
+                        endif;
                     endforeach;
                 endif;
                 ?>

@@ -8,7 +8,7 @@ First, you'll need to register a custom navigation menu in your theme's `functio
 function register_my_menu() {
     register_nav_menu('top-navigation', __('Top Navigation'));
 }
-add_action('init', 'category_menu_top');
+add_action('init', 'register_my_menu');
 ```
 
 ### Step 2: Add the Categories to the Navigation Menu
@@ -147,3 +147,24 @@ Here’s how it all comes together:
 ```
 
 This code provides a fallback if the custom navigation menu is not set in the WordPress admin panel, ensuring that the categories are always displayed.
+
+
+    [14] => WP_Term Object
+        (
+            [term_id] => 32
+            [name] => Art Types
+            [slug] => art-types
+            [term_group] => 0
+            [term_taxonomy_id] => 32
+            [taxonomy] => category
+            [description] => Various styles and genres of art
+            [parent] => 0
+            [count] => 0
+            [filter] => raw
+            [cat_ID] => 32
+            [category_count] => 0
+            [category_description] => Various styles and genres of art
+            [cat_name] => Art Types
+            [category_nicename] => art-types
+            [category_parent] => 0
+        )
