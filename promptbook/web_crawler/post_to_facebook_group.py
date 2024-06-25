@@ -1,6 +1,8 @@
 import facebook
 import requests
 
+# pip install facebook-sdk requests
+
 # Facebook access token
 access_token = 'YOUR_ACCESS_TOKEN'
 
