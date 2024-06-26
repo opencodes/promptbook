@@ -1,37 +1,95 @@
-.custom-posts-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.custom-nav  {
+    background-color: #fff;
 }
-
-.custom-post-item {
-    width: calc(25% - 20px);
-    aspect-ratio: 1 / 1;
-    position: relative;
-    overflow: hidden;
-}
-
-.custom-post-image {
+.ct-container {
     width: 100%;
-    height: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
-
-.custom-post-title-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    text-align: center;
+.ct-section {
     padding: 10px;
-}
-
-.custom-post-title-overlay h2 {
     margin: 0;
-    font-size: 18px;
+}
+.ct-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.ct-section .ct-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.ct-section .ct-list .post-item {
+    width: calc(20% - 8px);
+    cursor: pointer;
+    transition: all ease 0.4s;
+} 
+.ct-section .ct-list .post-item:hover {
+    /* background-color: #000; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+} 
+.ct-section .ct-list .post-item img {
+    width: 100%;
+    border-radius: 6px;
+}
+.ct-section .ct-list .post-item h4{
+    color: #000;
+}
+ 
+.ct-section .ct-list .post-item h4{
+    font-size: 14px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+}
+.ct-section .ct-list .post-item p {
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    font-weight: 500;
+    padding-bottom: 5px;
+} 
+.tags span {
+    padding-right:5px;
+}
+.category-tabs {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+.category-tabs .category-tab {
+    background: none;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    padding: 10px 0;
+	letter-spacing: 0;
+}
+.category-tabs .category-tab.active {
+    color: #ccc;
+}
+@media only screen and (max-width: 2000px) {
+    .ct-section .ct-list {
+        gap: 10px;
+    }
+    .ct-section .ct-list .post-item {
+        width: calc(10% - 9px);
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .ct-section .ct-list {
+        gap: 10px;
+    }
+    .ct-section .ct-list .post-item {
+        width: calc(20% - 8px);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .ct-section .ct-list {
+        gap: 10px;
+    }
+    .ct-section .ct-list .post-item {
+        width: calc(50% - 5px);
+    }
 }

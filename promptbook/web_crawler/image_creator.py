@@ -2,12 +2,18 @@ import os
 import time
 import base64
 import json
+import requests
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+POSTS_FILE = "posts.json"
+SITE_URL = "https://promptbook.in"
+USERNAME = "promptbook.in"
+PASSWORD = "jtlG puvW m2oL caMP 2WpN BUHg"
 
 def read_prompts_from_file(file_path):
     with open(file_path, 'r') as file:
@@ -23,15 +29,11 @@ def truncate_title(prompt):
     else:
         return prompt[:max_length] + "..."
 
-def write_json_and_update_prompts(image_data_list, unprocessed_prompts, json_file_path, prompt_file_path):
+def write_unprocessed_post_to_json(unprocessed_posts, json_file_path):
     # Write the list to a JSON file
     with open(json_file_path, "w") as json_file:
-        json.dump(image_data_list, json_file, indent=4)
+        json.dump(unprocessed_posts, json_file, indent=4)
     
-    # Update the prompt file with unprocessed prompts
-    with open(prompt_file_path, "w") as prompt_file:
-        prompt_file.write("\n".join(unprocessed_prompts))
-
 def setup_webdriver():
     # Connect to the existing Chrome session
     options = webdriver.ChromeOptions()
@@ -100,7 +102,7 @@ def download_image(driver, directory):
         print(f"- Failed to download image: {e}")
         raise RuntimeError(f"Failed to locate, extract or save generated image: {e}")
 
-def process_prompt(driver, prompt, directory):
+def generate_image(driver, prompt, directory):
     try:
         print(f"----- Processing prompt '{prompt}' -----")
         click_prompt_button(driver)
@@ -113,14 +115,59 @@ def process_prompt(driver, prompt, directory):
         image_path = download_image(driver, directory)
         print(f"Image for prompt downloaded successfully!")
         
-        return {
-            "title": truncate_title(prompt),
-            "content": prompt,  # You can add content if needed
-            "image_path": image_path,
-            "categories": [1]  # You can add categories if needed
-        }
+        return image_path
     except Exception as e:
         return f"Failed to process prompt '{prompt}': {e}"
+def upload_image(file_path):
+    api_url = SITE_URL + "/wp-json/wp/v2/media"
+
+    # Open the file in binary mode and read its contents
+    with open(file_path, "rb") as file:
+        # Prepare the request headers with authentication
+        headers = {
+            "Authorization": "Basic " + base64.b64encode(f"{USERNAME}:{PASSWORD}".encode()).decode(),
+            "Content-Disposition": f"attachment; filename={file_path}",
+            "Content-Type": "image/png"  # Adjust content type according to your file type
+        }
+
+        # Send the POST request to upload the media
+        response = requests.post(api_url, headers=headers, data=file)
+        # Check the response
+        if response.status_code == 201:
+            print("Media uploaded successfully.")
+            # If successful, you can get the media URL from the response
+            media_url = response.json()["source_url"]
+            media_id =  response.json()["id"]
+            print("Media URL:", media_url)
+            print("Media ID:", media_id)
+            return media_id
+        else:
+            print("Failed to upload media. Status code:", response.status_code)
+            print("Response:", response.text)
+            return None
+
+
+def create_post(title, content, image_id):
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Basic " + base64.b64encode(f"{USERNAME}:{PASSWORD}".encode()).decode()
+    }
+    post_data = {
+        "title": title,
+        "content": content,
+        "status": "publish",
+        "featured_media": image_id
+    }
+    
+    response = requests.post(f"{SITE_URL}/wp-json/wp/v2/posts", headers=headers, json=post_data)
+    
+    if response.status_code == 201:
+        print("----- Post creation complete -----")
+        return response.json()
+    else:
+        print(f"Failed to create post {title}: {response.content}")
+        return None
+
 
 def main():
     driver = setup_webdriver()
@@ -130,30 +177,31 @@ def main():
         open_webpage(driver, "https://designer.microsoft.com/image-creator")
         print("Webpage opened successfully!")
         
-        prompt_file_path = "prompt.txt"
-        prompts = read_prompts_from_file(prompt_file_path)
-        
-        image_data_list = []
-        unprocessed_prompts = []
+        unprocessed_post = []
         error_messages = []
-        
         directory = "generated_images"
+
+
+        with open(POSTS_FILE, 'r') as file:
+            posts = json.load(file)
+
         if not os.path.exists(directory):
             os.makedirs(directory)
         
-        print(f"Processing prompts...{len(prompts)}")
-        for prompt in prompts:
-            result = process_prompt(driver, prompt, directory)
-            if isinstance(result, dict):
-                image_data_list.append(result)
+        for post in posts:
+            prompt = post.get('content')
+            image_path = generate_image(driver, prompt, directory)
+
+            if image_path:
+                print("----- Image generation complete -----")
+                create_post(post.get('title'), post.get('content'), upload_image(image_path))
+                os.remove(image_path)
             else:
-                unprocessed_prompts.append(prompt)
+                unprocessed_post.append(post)
                 print(f"- Failed to generate image for prompt '{prompt}'")
-                error_messages.append(result)
+                error_messages.append(post.get('title'))
         
-        print("----- Image generation complete -----")
-        print(f"Generated {len(image_data_list)} images!")
-        write_json_and_update_prompts(image_data_list, unprocessed_prompts, "posts.json", prompt_file_path)
+        write_unprocessed_post_to_json(unprocessed_post, "posts.json")
         print("JSON file generated and unprocessed prompts updated successfully!")
         
         if error_messages:

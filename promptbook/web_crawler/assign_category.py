@@ -52,6 +52,7 @@ categories = {
 }
 json_file_path = 'category.json'
 
+# Function to retrieve posts with pagination
 
 
 def extract_term_ids(input_dict):
@@ -150,6 +151,7 @@ def update_post_categories(post_id, new_category_ids):
     }
     data = {
         'categories': new_category_ids
+        
     }
     response = requests.post(url, headers=headers, json=data, auth=(USERNAME, PASSWORD))
     print(data)
@@ -157,11 +159,49 @@ def update_post_categories(post_id, new_category_ids):
         print(f"Successfully updated categories for post {post_id}")
     else:
         print(f"Failed to update categories for post {post_id}")
+
+# Function to update categories associated with a post
+def update_post_image(post_data):
+    post_id = post_data['id']
+    url = f"{WORDPRESS_URL}posts/{post_id}"
+    featured_media_url = f"https://promptbook.in/wp-json/wp/v2/media/{post_data['featured_media']}"
+    headers = {
+        'Content-Type': 'application/json',
+    }
+    mediadetails = {}
+    print(featured_media_url)
+    if(featured_media_url):
+        response = requests.get(featured_media_url)
+        if response.status_code == 200:
+            mediadetails = response.json()
+        else:
+            print(f"Failed to fetch image for post {post_id}")
+            return None
+    # The HTML to append
+    append_html = f'''
+        <!-- wp:image {{"id":{mediadetails["id"]},"sizeSlug":"full","linkDestination":"none"}} -->
+        <figure class="wp-block-image size-full"><img src="{mediadetails["source_url"]}" alt="" class="wp-image-{mediadetails["id"]}"/></figure>
+        <!-- /wp:image -->
+    '''
+    print("URL",url)
+   
+    current_content = post_data['content']['rendered']
+    updated_content = current_content + append_html
+    data = {
+        "content": updated_content
+    }
+    print(data)
+    response = requests.post(url, headers=headers, json=data, auth=(USERNAME, PASSWORD))
+    if response.status_code == 200:
+        print(f"Successfully updated image for post {post_id}")
+    else:
+        print(f"Failed to update image for post {post_id}")
+
 terms = read_terms_from_json(json_file_path)
 # Main execution
 def main():
     # Fetch and update posts in batches
-    total_posts_to_update = 135
+    total_posts_to_update = 150
     posts_per_batch = 10
 
     for page in range(1, (total_posts_to_update // posts_per_batch) + 2):
@@ -171,8 +211,10 @@ def main():
 
         for post in posts:
             post_id = post['id']
+            print(f"Updating post {post_id}")
             new_category_ids = assign_category(post['content']['rendered'])
-            update_post_categories(post_id, new_category_ids)
+            # update_post_categories(post_id, new_category_ids)
+            update_post_image(post)
 
             # Check if we've updated enough posts
             total_posts_to_update -= 1

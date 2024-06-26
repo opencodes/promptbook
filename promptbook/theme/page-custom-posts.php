@@ -14,16 +14,14 @@ get_header();
     <div class="site-header-row-container-inner">
         <div class="site-container">
             <div class="category-tabs">
-                <button class="category-tab active" data-category-id="all">All</button>
-                
                 <?php
                 if ($categories):
                     foreach ($categories as $category):
                         if ($category->category_parent == 0):
                         ?>
-                        <button class="category-tab" data-category-id="<?php echo esc_attr($category->term_id); ?>">
+                        <a href="<?php echo get_category_link($category->term_id) ?>" class="category-tab" data-category-id="<?php echo esc_attr($category->term_id); ?>">
                             <?php echo esc_html($category->name); ?>
-                        </button>
+                        </a>
                         <?php
                         endif;
                     endforeach;
@@ -67,8 +65,8 @@ get_header();
                     <h4><a href="<?php echo esc_url($post_link); ?>"><?php echo esc_html($post_title); ?></a></h4>
                     <p class="tags">
                     <?php foreach ($post_categories as $category): ?>
-                                            <span><?php echo esc_html($category->name); ?></span>
-                                        <?php endforeach; ?>
+                    <span><?php echo esc_html($category->name); ?></span>
+                    <?php endforeach; ?>
                     </p>
                 </div>
                 <?php
