@@ -1,5 +1,13 @@
 [
     {
+        "title": "Prompt:Create an 8K, hyper-realistic, airbrush glo...",
+        "content": "Prompt:Create an 8K, hyper-realistic, airbrush glossy image of a light dark-skinned goddess Amman adorned in traditional Indian attire and jewelry. She has a flaming, radiant triangle halo and flowing hair. The goddess is holding a golden trident in her left hand and blessing the viewer with her right hand, with a soft glow on her face. The background features a detailed and colorful temple, multi-tiered with elaborate architectural details. Her attire includes intricate patterns and embellishments, reflecting rich cultural heritage. Use vibrant colors characteristic of Indian art, such as deep reds, golds, and greens. Add a few birds flying around to give the image a lively atmosphere.",
+        "image_path": "",
+        "categories": [
+            1
+        ]
+    },
+    {
         "title": "Create a realistic image captured in a studio phot...",
         "content": "Create a realistic image captured in a studio photoshoot using the dynamic studio lighting. A young and traditionally beautiful Bengali girl from Bangladesh in a silver wedding sari with a black and grey rose tattoo on her free back and a black and grey butterfly tattoo on her right waist just above the hip, with thin lining enhancing the roses with alcohol ink",
         "image_path": "",

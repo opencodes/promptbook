@@ -778,5 +778,48 @@
     "name": "Nature",
     "slug": "nature",
     "description": "Artistic representations of natural elements, land..."
+  },
+  {
+    "term_id": 163,
+    "name": "God",
+    "slug": "god",
+    "description": "Devotional artistic representations of deity, i..."
+  },
+  {
+    "term_id": 164,
+    "description": "Ganesha",
+    "slug": "ganesha",
+    "name": "Ganesha"
+  },
+  {
+    "term_id": 165,
+    "name": "Hanuman",
+    "description": "Hanuman",
+    "slug": "hanuman"
+  },
+  {
+    "term_id": 166,
+    "count": 0,
+    "description": "",
+    "name": "Krishna",
+    "slug": "krishna"
+  },
+  {
+    "term_id": 167,
+    "description": "",
+    "name": "Shiva",
+    "slug": "shiva"
+  },
+  {
+    "term_id": 168,
+    "description": "",
+    "name": "Goddess",
+    "slug": "goddess"
+  },
+  {
+    "term_id": 169,
+    "description": "",
+    "name": "Buddha",
+    "slug": "buddha"
   }
 ]

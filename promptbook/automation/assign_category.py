@@ -47,8 +47,8 @@ categories = {
         "Male", "Female", "Gender-neutral"
     ],
     "Object Types": [
-        "Human", "Animal", "Non-living", "Nature"
-    ]
+        "Human", "Animal", "Non-living", "Nature", "God",      "Ganesha",     "Hanuman",     "Krishna",     "Shiva",     "Goddess",     "Buddha"   
+          ]
 }
 json_file_path = 'category.json'
 
@@ -213,8 +213,8 @@ def main():
             post_id = post['id']
             print(f"Updating post {post_id}")
             new_category_ids = assign_category(post['content']['rendered'])
-            # update_post_categories(post_id, new_category_ids)
-            update_post_image(post)
+            update_post_categories(post_id, new_category_ids)
+            # update_post_image(post)
 
             # Check if we've updated enough posts
             total_posts_to_update -= 1

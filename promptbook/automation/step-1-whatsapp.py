@@ -37,7 +37,7 @@ messages = driver.find_elements(By.CSS_SELECTOR, "span.selectable-text.copyable-
 # Open a file to write the messages
 with open("prompt.txt", "w", encoding="utf-8") as file:
     for message in messages:
-        file.write(message.text + "\n")
+        file.write(message.text + "\n\n")
 
 # Close the browser
 driver.quit()
